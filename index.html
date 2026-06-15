@@ -19,6 +19,11 @@
   .src-list { columns: 2; column-gap: 2.4em; max-width: 1120px; margin: 0.4em auto 0; font-size: 0.78em; line-height: 1.35; }
   .src-list li { break-inside: avoid; margin-bottom: 0.38em; }
   .src-list a { color: var(--accent-blue); text-decoration: underline; text-underline-offset: 2px; }
+  /* Alignment: commit to left on content slides. Title and Part dividers stay centered. */
+  .layout-content { align-items: flex-start; text-align: left; }
+  .layout-content .center-narrow,
+  .layout-content .axes,
+  .layout-content .disc-grid { margin-left: 0; margin-right: 0; }
 </style>
 </head>
 <body>
