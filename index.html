@@ -90,7 +90,6 @@
     <span class="kicker">Familiar tools</span>
     <h2>The chatbots you know</h2>
     <p style="margin-bottom: 0.7em;">ChatGPT, Claude, Copilot, Gemini. The basic experience is familiar: you type something, and it types back.</p>
-    <p>It&rsquo;s worth seeing how that works.</p>
   </div>
   <div class="stage" style="background: var(--bg-panel);">
     <img src="images/steve-hello-chat.png" alt="A chat interface: the user says 'Hello!' and the assistant replies warmly and asks how it can help." class="screenshot-img">
@@ -102,8 +101,8 @@
   <div class="content">
     <span class="kicker">How it works</span>
     <h2>Predicting the next piece of text</h2>
-    <p style="margin-bottom: 0.7em;">When the model answers, it isn&rsquo;t looking anything up. It&rsquo;s generating a likely continuation of your text, one piece at a time.</p>
-    <p>Underneath, it repeats that one step, many times over.</p>
+    <p style="margin-bottom: 0.7em;">When the model answers, it generates a likely continuation of your text, one piece at a time, rather than retrieving a stored fact.</p>
+    <p>It repeats that step to produce each answer.</p>
   </div>
   <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
     <div style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:340px; margin:0 auto;">
@@ -134,10 +133,10 @@
 <div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 8: How it's trained" data-slide="how-trained" tabindex="-1">
   <div class="content">
     <span class="kicker">How it&rsquo;s made</span>
-    <h2>Where that ability comes from</h2>
+    <h2>How a model learns</h2>
     <p style="margin-bottom: 0.7em;">It learns to guess the next piece by reading an enormous amount of text and adjusting itself, over and over, to guess a little better. Afterward, people tune it with feedback on which answers are better.</p>
-    <p style="margin-bottom: 0.7em;">That text is scraped at scale from the open web, digitized books, and public code &mdash; very likely including open materials like the ones you make.</p>
-    <div class="tip-box" style="margin-top: 0.4em;"><p>So <strong>where that text came from, and who agreed to it,</strong> is a question we come back to in the worries.</p></div>
+    <p style="margin-bottom: 0.7em;">That text is scraped at scale from across the public web, books and code included, very likely with open materials like the ones you make.</p>
+    <div class="tip-box" style="margin-top: 0.4em;"><p>So <strong>where the training text came from, and who agreed to it,</strong> is a question we come back to in the worries.</p></div>
   </div>
   <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
     <div style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:360px; margin:0 auto;">
@@ -158,7 +157,7 @@
     <span class="kicker">A concrete example</span>
     <h2>Inside The Pile</h2>
     <p style="margin-bottom: 0.7em;">Models rarely say what they trained on. <strong>The Pile</strong> is an exception: an 825&nbsp;GB corpus EleutherAI assembled and documented openly in 2020, so we can see what goes into a model.</p>
-    <p>It bundles 22 sources. Most are what an open-knowledge project would celebrate; one is what the lawsuits are about. <strong>The open, the scholarly, and the pirated sit in one pile.</strong></p>
+    <p>It bundles 22 sources. Most are what an open-knowledge project would celebrate. One, Books3, is what the lawsuits are about. <strong>That puts open work and pirated books in the same pile.</strong></p>
     <p class="src">On the corpus: <a href="https://pile.eleuther.ai/" target="_blank" rel="noopener">Gao et al., &ldquo;The Pile,&rdquo; EleutherAI, 2020</a>; on the Books3 takedown, <a href="https://en.wikipedia.org/wiki/The_Pile_(dataset)" target="_blank" rel="noopener">Wikipedia, 2023</a>.</p>
   </div>
   <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
@@ -184,7 +183,7 @@
   <div class="content">
     <span class="kicker">The problem &amp; the fix</span>
     <h2>From a guess to a grounded answer</h2>
-    <p style="margin-bottom: 0.6em;">Ask a plain model for today&rsquo;s weather and it makes a confident guess, with no live data behind it. It can&rsquo;t reach today.</p>
+    <p style="margin-bottom: 0.6em;">Ask a plain model for today&rsquo;s weather and it makes a confident guess, with no live data behind it and no way to reach today&rsquo;s forecast.</p>
     <p style="margin-bottom: 0.4em;">Newer systems can reach outside themselves with a few <strong>tools</strong>:</p>
     <ul style="line-height:1.85; margin-bottom: 0.5em;">
       <li><strong>Search</strong> the web or a catalog</li>
@@ -213,8 +212,8 @@
   <div class="content">
     <span class="kicker">Agentic</span>
     <h2>Working in a loop</h2>
-    <p style="margin-bottom: 0.7em;">A plain chatbot answers and stops.</p>
-    <p style="margin-bottom: 0.7em;">An <strong>agentic</strong> one keeps going: it looks at a result, decides what to do next, calls another tool, and repeats until the task seems done.</p>
+    <p style="margin-bottom: 0.7em;">A plain chatbot answers once and stops there.</p>
+    <p style="margin-bottom: 0.7em;">An <strong>agentic</strong> one keeps going. It looks at a result, decides what to do next, calls another tool, and repeats until the task seems done.</p>
     <p>So it can take several steps toward a goal on its own.</p>
   </div>
   <div class="stage" style="background: var(--bg-panel);">
@@ -236,9 +235,9 @@
   <div class="content">
     <span class="kicker">The worry that&rsquo;s ours</span>
     <h2>What happens to &ldquo;open&rdquo;</h2>
-    <p style="margin-bottom: 0.6em;">Open licensing rests on a bargain: reuse freely, credit the source, give back to the commons. <strong>AI training keeps the reuse and drops the rest.</strong></p>
-    <p style="margin-bottom: 0.6em;">The more openly you license, the more frictionlessly your work feeds it. Openness is exactly what makes it ingestible &mdash; paywalled writing had friction protecting it; CC&nbsp;BY was served up on a plate.</p>
-    <p>The reflex this triggers &mdash; lock it down, add a no-AI clause &mdash; would shrink the commons faster than the scrapers do. Researchers call that a <em>&ldquo;data winter.&rdquo;</em></p>
+    <p style="margin-bottom: 0.6em;">Open licensing rests on a bargain. You may reuse the work freely, as long as you credit the source and give back to the commons. <strong>AI training takes the reuse and gives nothing back.</strong></p>
+    <p style="margin-bottom: 0.6em;">The more openly you license, the easier your work is to ingest. Paywalled writing had some friction protecting it; openly licensed work has none.</p>
+    <p>The first reflex is to lock it down or add a no-AI clause. Locking down would shrink the commons faster than the scrapers do. Researchers call that a <em>&ldquo;data winter.&rdquo;</em></p>
     <p class="src">On openness as its own vulnerability: <a href="https://openfuture.eu/publication/paradox-of-open-policies-for-the-digital-commons/" target="_blank" rel="noopener">Open Future, &ldquo;The Paradox of Open&rdquo;</a>; <a href="https://sverhulst.medium.com/the-weaponisation-of-openness-toward-a-new-social-contract-for-data-in-the-ai-era-fb9f49ef6109" target="_blank" rel="noopener">Verhulst, &ldquo;The Weaponisation of Openness,&rdquo; 2025</a>.</p>
   </div>
   <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
@@ -256,12 +255,12 @@
 <div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 15: You can't license your way out" data-slide="worry-no-exit" tabindex="-1">
   <span class="kicker">Where that leaves you</span>
   <h2>You can&rsquo;t license your way out</h2>
-  <p class="lead center-narrow" style="margin-bottom: 0.7em;">The instinct is to add a no-AI or non-commercial clause. Creative Commons &mdash; the steward of these licenses &mdash; says that doesn&rsquo;t work, and backfires.</p>
+  <p class="lead center-narrow" style="margin-bottom: 0.7em;">Many people&rsquo;s first move is to add a no-AI or non-commercial clause. Creative Commons, the steward of these licenses, says that doesn&rsquo;t work and backfires.</p>
   <div class="grid-2" style="margin-top: 0.2em;">
-    <div class="card" style="border-left-color: var(--accent-red);"><h4>The law already blessed it</h4><p style="font-size:1.05em;">In 2025, courts ruled the training itself is fair use, even for copyrighted work. Anthropic still paid $1.5 billion for the books it took from pirate sites &mdash; but the ingestion itself was held legal.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Restricting backfires</h4><p style="font-size:1.05em;">Because training is often already fair use, &ldquo;the CC license conditions have limited application to machine reuse.&rdquo; A more restrictive license blocks the human reuse that makes your work an OER &mdash; while failing to stop the machine.</p></div>
+    <div class="card" style="border-left-color: var(--accent-red);"><h4>The courts ruled it legal</h4><p style="font-size:1.05em;">In 2025, courts ruled the training itself is fair use, even for copyrighted work. Anthropic still paid $1.5 billion for downloading those books from pirate sites, though the courts allowed the training itself.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Locking it down backfires</h4><p style="font-size:1.05em;">Because training is often already fair use, &ldquo;the CC license conditions have limited application to machine reuse.&rdquo; A restrictive license mainly blocks the people who would legitimately reuse your work, and does nothing to stop the model.</p></div>
   </div>
-  <div class="tip-box" style="margin-top: 0.8em;"><p><strong>What&rsquo;s left is collective, not individual:</strong> Creative Commons&rsquo; CC&nbsp;signals, its 2026 turn toward shared infrastructure and conditional access, Wikimedia metering scrapers behind a paid API. All of it is nascent and contested. We use these tools, and we don&rsquo;t think this is solved. It&rsquo;s the first thing we want to discuss.</p></div>
+  <div class="tip-box" style="margin-top: 0.8em;"><p><strong>What&rsquo;s working instead is collective.</strong> Creative Commons&rsquo; CC&nbsp;signals, its 2026 turn toward shared infrastructure and conditional access, Wikimedia metering scrapers behind a paid API. All of it is nascent and contested. We use these tools, and we don&rsquo;t think this is solved. It&rsquo;s the first thing we want to discuss.</p></div>
   <p class="src">CC licenses can&rsquo;t block training: <a href="https://creativecommons.org/2025/05/15/understanding-cc-licenses-and-ai-training-a-legal-primer/" target="_blank" rel="noopener">CC legal primer, 2025</a>. The ruling: <a href="https://www.wiggin.com/publication/bartz-v-anthropic-first-court-decision-on-fair-use-defense-in-llm-training/" target="_blank" rel="noopener">Bartz v. Anthropic</a> + <a href="https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/" target="_blank" rel="noopener">$1.5B settlement</a>. Collective responses: <a href="https://creativecommons.org/2026/05/13/from-signals-to-infrastructure-strengthening-the-commons-for-the-ai-era/" target="_blank" rel="noopener">CC, &ldquo;From Signals to Infrastructure,&rdquo; 2026</a>; <a href="https://www.techtimes.com/articles/312606/20251110/wikipedia-wants-companies-stop-scraping-data-ai-training-offers-paid-api-access-instead.htm" target="_blank" rel="noopener">Wikimedia paid API, 2025</a>.</p>
 </div>
 
@@ -270,8 +269,8 @@
   <span class="kicker">A common worry &middot; close to home</span>
   <h2>Open vs closed weights</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>The concern</h4><p style="font-size:1.05em;">Build an OER on a closed, API-only model and the content can carry an open license, but its engine can&rsquo;t. No one can retain, run, inspect, or redistribute the model the way OER&rsquo;s <strong>5 R&rsquo;s</strong> require, and using it takes an account and a subscription. So you reintroduce the cost and gatekeeping open education set out to remove &mdash; the access and equity the movement fought for.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>What we&rsquo;d add</h4><p style="font-size:1.05em;">Open-weight models can be downloaded and run locally, which is what makes the 5 R&rsquo;s possible again &mdash; and they&rsquo;ve nearly caught up on capability. Two cautions: &ldquo;open weights&rdquo; is not &ldquo;open source&rdquo; (most withhold the training data and code, under use-restricting licenses like Llama; the OSI&rsquo;s bar of data, code, <em>and</em> weights is cleared by few &mdash; OLMo, Pythia). And open weights still need hardware to run, so without shared compute the openness can stay out of reach.</p></div>
+    <div class="card" style="border-left-color: var(--accent-green);"><h4>The concern</h4><p style="font-size:1.05em;">Build an OER on a closed, API-only model and the content can carry an open license, but the model underneath stays proprietary. No one can retain, run, inspect, or redistribute the model the way OER&rsquo;s <strong>5 R&rsquo;s</strong> require, and using it takes an account and a subscription. So you reintroduce the cost and gatekeeping that open education set out to remove.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>What we&rsquo;d add</h4><p style="font-size:1.05em;">Open-weight models can be downloaded and run locally, which makes the 5 R&rsquo;s possible again, and they&rsquo;ve nearly caught up on capability. Two cautions. First, &ldquo;open weights&rdquo; is not &ldquo;open source&rdquo;: most withhold the training data and code, under use-restricting licenses like Llama, and the OSI&rsquo;s bar of data, code, and weights is cleared by few, such as OLMo and Pythia. Second, open weights still need hardware to run, so without shared compute the openness can stay out of reach.</p></div>
   </div>
   <p class="src">On the 5&nbsp;R&rsquo;s and what counts as open: <a href="https://opencontent.org/definition/" target="_blank" rel="noopener">Wiley, &ldquo;Defining the &lsquo;Open&rsquo;&rdquo;</a>; on proprietary AI vs. open education, <a href="https://www.unesco.org/en/articles/open-education-principles-resisting-metrics-ai-black-boxes" target="_blank" rel="noopener">UNESCO, 2024</a>; &ldquo;open weights&rdquo; &ne; &ldquo;open source,&rdquo; <a href="https://opensource.org/blog/metas-llama-license-is-still-not-open-source" target="_blank" rel="noopener">OSI, 2024</a>; the compute divide, <a href="https://societyandai.org/perspectives/beyond-the-open-weights/" target="_blank" rel="noopener">Society &amp; AI, 2025</a>.</p>
 </div>
@@ -348,8 +347,8 @@
   <h2>From idea to artifact</h2>
   <p class="lead center-narrow">For OER, subject experts can now build the resource they imagine, often without writing every line themselves.</p>
   <div class="axes" style="margin-top:1.2em;">
-    <div class="axis"><span class="ax-num">&#128218;</span><h4>Digitize &amp; open</h4><p>Turn archives, manuscripts, and PDFs into searchable, publishable, openly-licensed resources.</p></div>
-    <div class="axis"><span class="ax-num">&#127918;</span><h4>Make it interactive</h4><p>Generate games, readers, and companions students want to use.</p></div>
+    <div class="axis"><span class="ax-num">&#128218;</span><h4>Digitize &amp; open</h4><p>Turn scanned archives and old PDFs into searchable, openly licensed resources.</p></div>
+    <div class="axis"><span class="ax-num">&#127918;</span><h4>Make it interactive</h4><p>Generate games and readers students actually want to use.</p></div>
     <div class="axis"><span class="ax-num">&#129309;</span><h4>Democratize</h4><p>Lower the barrier so someone with no coding background can still build a working tool.</p></div>
   </div>
 </div>
@@ -393,7 +392,7 @@
     <span class="kicker">Project &middot; Stefano Morello</span>
     <h2>Lalli &mdash; <em>Il Venditore di Sogni</em></h2>
     <p style="margin-bottom:0.6em;">An OCR + translation pipeline that digitizes the manuscripts of Italian-American writer Franco Lalli, then publishes them as an open, searchable archive.</p>
-    <p>Archival materials become freely browsable, side-by-side original and translation, with scholarly metadata.</p>
+    <p>Anyone can browse the archive freely, original beside translation, with scholarly metadata.</p>
   </div>
   <div class="stage stage-embed">
     <div class="browser-frame">
@@ -433,7 +432,7 @@
     <span class="kicker">Project &middot; Beatrice Carnelutti</span>
     <h2>Impariamo l&rsquo;Italiano!</h2>
     <p style="margin-bottom:0.6em;">Interactive Italian-learning games (Wordle, memory, a verb-tense wheel, crosswords), free and no login required.</p>
-    <p><strong>Bea has no coding skills.</strong> The whole site was built with AI assistance, the clearest case of democratized authorship here. (There&rsquo;s a Russian edition, too.)</p>
+    <p><strong>Bea has no coding skills.</strong> The whole site was built with AI assistance, by an author with no code writing real OER. (There&rsquo;s a Russian edition, too.)</p>
     <p>Stefano made a multilingual version, <a href="https://stefanomorello.com/langames/" target="_blank" rel="noopener" style="color: var(--accent-blue); text-decoration: underline; text-underline-offset: 3px;">LanGames</a>, that generates game content for ten languages.</p>
   </div>
   <div class="stage stage-embed">
@@ -473,8 +472,8 @@
   <div class="content">
     <span class="kicker">An example</span>
     <h2>ThinkWith</h2>
-    <p style="margin-bottom: 0.6em;">A first-year writing instructor, Nicole Walker, built this after our workshops. A student pastes in a source passage, a cultural artifact, and a paragraph connecting them. The model gives feedback on how well the connection works.</p>
-    <p style="margin-bottom: 0.6em;"><strong>What worked:</strong> the AI doesn&rsquo;t write the paragraph. It makes the student keep revising until the paragraph ties the source and the artifact together.</p>
+    <p style="margin-bottom: 0.6em;">A first-year writing instructor, Nicole Walker, built this after our workshops. A student pastes in a source passage and a cultural artifact, plus a paragraph connecting the two. The model gives feedback on how well the connection works.</p>
+    <p style="margin-bottom: 0.6em;"><strong>What worked:</strong> the AI never writes the paragraph for the student. It keeps sending them back to revise until the paragraph ties the source and the artifact together.</p>
     <p><strong>Where it breaks:</strong> the judge is itself a model scoring a rubric, so the teacher still has to judge the result. And Walker said building it meant &ldquo;committing all the sins of instrumentalist thinking.&rdquo;</p>
   </div>
   <div class="stage stage-embed">
