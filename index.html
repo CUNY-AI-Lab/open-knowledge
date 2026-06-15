@@ -247,19 +247,42 @@
   <div class="divider-line"></div>
 </div>
 
-<!-- 15 — THEFT / LICENSING (leads the worries: ties to training) -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 15: Training on people's work" data-slide="worry-theft" tabindex="-1">
-  <span class="kicker">A common worry</span>
-  <h2>Training on people&rsquo;s work</h2>
-  <div class="grid-2" style="margin-top: 0.4em;">
-    <div class="card" style="border-left-color: var(--accent-green);"><h4>The concern</h4><p style="font-size:1.05em;">A lot of open and public writing was used for training without anyone being asked &mdash; the open materials this fellowship exists to make. Many see it as theft, with companies profiting from work they took for free.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>What we&rsquo;d add</h4><p style="font-size:1.05em;">In 2025, courts ruled that the training itself is fair use, even for copyrighted work, so most of it is legal. Anthropic still paid 1.5 billion dollars for downloading books from pirate sites, which the training ruling did not cover. Consent and payment are being worked out alongside copyright now, through licensing deals and Creative Commons&rsquo; new preference signals, which let creators say how their work may be used.</p></div>
+<!-- 15 — THE OPEN TENSION, build 1 of 2: the diagnosis -->
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 15: What happens to open" data-slide="worry-open" tabindex="-1">
+  <div class="content">
+    <span class="kicker">The worry that&rsquo;s ours</span>
+    <h2>What happens to &ldquo;open&rdquo;</h2>
+    <p style="margin-bottom: 0.6em;">Open licensing rests on a bargain: reuse freely, credit the source, give back to the commons. <strong>AI training keeps the reuse and drops the rest.</strong></p>
+    <p style="margin-bottom: 0.6em;">The more openly you license, the more frictionlessly your work feeds it. Openness is exactly what makes it ingestible &mdash; paywalled writing had friction protecting it; CC&nbsp;BY was served up on a plate.</p>
+    <p>The reflex this triggers &mdash; lock it down, add a no-AI clause &mdash; would shrink the commons faster than the scrapers do. Researchers already have a name for it: a <em>&ldquo;data winter.&rdquo;</em></p>
+    <p class="src">On openness as its own vulnerability: <a href="https://openfuture.eu/publication/paradox-of-open-policies-for-the-digital-commons/" target="_blank" rel="noopener">Open Future, &ldquo;The Paradox of Open&rdquo;</a>; <a href="https://sverhulst.medium.com/the-weaponisation-of-openness-toward-a-new-social-contract-for-data-in-the-ai-era-fb9f49ef6109" target="_blank" rel="noopener">Verhulst, &ldquo;The Weaponisation of Openness,&rdquo; 2025</a>.</p>
   </div>
-  <p class="src">On AI training and copyright: <a href="https://www.wiggin.com/publication/bartz-v-anthropic-first-court-decision-on-fair-use-defense-in-llm-training/" target="_blank" rel="noopener">Bartz v. Anthropic, 2025</a> (training fair use; pirated sourcing not), and the <a href="https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/" target="_blank" rel="noopener">$1.5B settlement</a>; on preference signals, <a href="https://creativecommons.org/2025/06/25/introducing-cc-signals-a-new-social-contract-for-the-age-of-ai/" target="_blank" rel="noopener">Creative Commons, CC signals, 2025</a>.</p>
+  <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
+    <div style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:360px; margin:0 auto;">
+      <div class="flow-node flow-student"><div class="flow-node-label">The open bargain</div><div class="flow-node-desc">Reuse freely &middot; credit the source &middot; give back</div></div>
+      <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-blue)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
+      <div class="flow-node" style="background:var(--paper); border:2px solid rgba(59,111,181,0.3); border-radius:12px;"><div class="flow-node-label">AI training ingests it</div><div class="flow-node-desc">Takes the reuse, drops the credit, returns nothing</div></div>
+      <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-red)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
+      <div class="flow-node" style="background:rgba(214,69,65,0.08); border:2px solid rgba(214,69,65,0.4); border-radius:12px;"><div class="flow-node-label">A &ldquo;data winter&rdquo;</div><div class="flow-node-desc">People stop sharing; the commons shrinks</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 16 — THE OPEN TENSION, build 2 of 2: no individual exit -->
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 16: You can't license your way out" data-slide="worry-no-exit" tabindex="-1">
+  <span class="kicker">Where that leaves you</span>
+  <h2>You can&rsquo;t license your way out</h2>
+  <p class="lead center-narrow" style="margin-bottom: 0.7em;">The instinct is to add a no-AI or non-commercial clause. Creative Commons &mdash; the steward of these licenses &mdash; says that doesn&rsquo;t work, and backfires.</p>
+  <div class="grid-2" style="margin-top: 0.2em;">
+    <div class="card" style="border-left-color: var(--accent-red);"><h4>The law already blessed it</h4><p style="font-size:1.05em;">In 2025, courts ruled the training itself is fair use, even for copyrighted work. Anthropic still paid $1.5 billion for the books it took from pirate sites &mdash; but the ingestion itself was held legal.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Restricting backfires</h4><p style="font-size:1.05em;">Because training is often already fair use, &ldquo;the CC license conditions have limited application to machine reuse.&rdquo; A more restrictive license blocks the human reuse that makes your work an OER &mdash; while failing to stop the machine.</p></div>
+  </div>
+  <div class="tip-box" style="margin-top: 0.8em;"><p><strong>What&rsquo;s left is collective, not individual:</strong> Creative Commons&rsquo; CC&nbsp;signals, its 2026 turn toward shared infrastructure and conditional access, Wikimedia metering scrapers behind a paid API. All nascent, all contested. We use these tools, and we don&rsquo;t think this is solved &mdash; which is why it opens the discussion.</p></div>
+  <p class="src">CC licenses can&rsquo;t block training: <a href="https://creativecommons.org/2025/05/15/understanding-cc-licenses-and-ai-training-a-legal-primer/" target="_blank" rel="noopener">CC legal primer, 2025</a>. The ruling: <a href="https://www.wiggin.com/publication/bartz-v-anthropic-first-court-decision-on-fair-use-defense-in-llm-training/" target="_blank" rel="noopener">Bartz v. Anthropic</a> + <a href="https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/" target="_blank" rel="noopener">$1.5B settlement</a>. Collective responses: <a href="https://creativecommons.org/2026/05/13/from-signals-to-infrastructure-strengthening-the-commons-for-the-ai-era/" target="_blank" rel="noopener">CC, &ldquo;From Signals to Infrastructure,&rdquo; 2026</a>; <a href="https://www.techtimes.com/articles/312606/20251110/wikipedia-wants-companies-stop-scraping-data-ai-training-offers-paid-api-access-instead.htm" target="_blank" rel="noopener">Wikimedia paid API, 2025</a>.</p>
 </div>
 
 <!-- 16 — BIAS -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 16: Bias" data-slide="worry-bias" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 17: Bias" data-slide="worry-bias" tabindex="-1">
   <span class="kicker">A common worry</span>
   <h2>Bias</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
@@ -270,7 +293,7 @@
 </div>
 
 <!-- 17 — LABOR -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 17: The people who build it" data-slide="worry-data-labor" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 18: The people who build it" data-slide="worry-data-labor" tabindex="-1">
   <span class="kicker">A common worry</span>
   <h2>The people who build it</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
@@ -281,7 +304,7 @@
 </div>
 
 <!-- 18 — JOBS & LEVERAGE -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 18: Jobs and leverage" data-slide="worry-jobs" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 19: Jobs and leverage" data-slide="worry-jobs" tabindex="-1">
   <span class="kicker">A common worry</span>
   <h2>Jobs and leverage</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
@@ -292,7 +315,7 @@
 </div>
 
 <!-- 19 — CONCENTRATION -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 19: Corporate concentration" data-slide="worry-concentration" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 20: Corporate concentration" data-slide="worry-concentration" tabindex="-1">
   <span class="kicker">A common worry</span>
   <h2>Corporate concentration</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
@@ -303,7 +326,7 @@
 </div>
 
 <!-- 20 — SLOP (open question, closes the worries) -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 20: Hollow text" data-slide="worry-slop" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 21: Hollow text" data-slide="worry-slop" tabindex="-1">
   <span class="kicker">A common worry</span>
   <h2>Hollow text</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
@@ -313,7 +336,7 @@
 </div>
 
 <!-- ============ PART IV — YOUR OER WORK ============ -->
-<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 21: Part Four, Your OER Work" data-slide="div-4" tabindex="-1">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 22: Part Four, Your OER Work" data-slide="div-4" tabindex="-1">
   <span class="ghost" aria-hidden="true">IV</span>
   <span class="section-label">Part IV</span>
   <h2>Your OER Work</h2>
@@ -322,7 +345,7 @@
 </div>
 
 <!-- 22 — ACADEMIC INTEGRITY -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 22: Academic integrity" data-slide="integrity" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 23: Academic integrity" data-slide="integrity" tabindex="-1">
   <span class="kicker">In the classroom</span>
   <h2>Academic integrity</h2>
   <div class="grid-2" style="margin-top: 0.4em;">
@@ -333,7 +356,7 @@
 </div>
 
 <!-- 23 — WHERE AI HELPS OER -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 23: Where it helps with OER work" data-slide="helps-oer" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 24: Where it helps with OER work" data-slide="helps-oer" tabindex="-1">
   <span class="kicker">Making OER</span>
   <h2>Where it helps with OER work</h2>
   <p class="lead center-narrow">For making and adapting open materials, a few uses are worth it, as long as a person owns the result.</p>
@@ -345,7 +368,7 @@
 </div>
 
 <!-- 24 — JUDGING APPROPRIATE USE -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 24: Judging appropriate use" data-slide="judging" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 25: Judging appropriate use" data-slide="judging" tabindex="-1">
   <span class="kicker">What to ask</span>
   <h2>Judging appropriate use</h2>
   <p class="lead center-narrow" style="margin-bottom: 0.8em;">A few questions to ask in every case:</p>
@@ -358,7 +381,7 @@
 </div>
 
 <!-- 25 — EXAMPLE: ThinkWith -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 25: An example, ThinkWith" data-slide="example" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 26: An example, ThinkWith" data-slide="example" tabindex="-1">
   <div class="content">
     <span class="kicker">An example</span>
     <h2>ThinkWith</h2>
@@ -379,7 +402,7 @@
 </div>
 
 <!-- 26 — REFUSAL AND ADOPTION -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 26: Informed refusal and informed adoption" data-slide="refusal" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 27: Informed refusal and informed adoption" data-slide="refusal" tabindex="-1">
   <span class="kicker">Adopting or refusing</span>
   <h2>Informed refusal <em>and</em> informed adoption</h2>
   <p class="lead center-narrow" style="margin-bottom: 0.8em;">Adopting and refusing are both legitimate. Whichever you choose, you should be able to say why.</p>
@@ -390,7 +413,7 @@
 </div>
 
 <!-- 27 — DISCUSSION -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 27: A few places to start" data-slide="discussion" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 28: A few places to start" data-slide="discussion" tabindex="-1">
   <span class="kicker">Over to you</span>
   <h2>A few places to start</h2>
   <div class="disc-grid">
@@ -403,7 +426,7 @@
 </div>
 
 <!-- 28 — SOURCES -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 28: Sources" data-slide="sources" tabindex="-1">
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 29: Sources" data-slide="sources" tabindex="-1">
   <span class="kicker">Sources</span>
   <h2>References</h2>
   <ul class="src-list">
@@ -416,7 +439,11 @@
     <li>Synergy Research Group, <a href="https://www.theregister.com/2025/11/20/aws_loses_market_share_azure_google/" target="_blank" rel="noopener">cloud infrastructure market share,</a> 2025.</li>
     <li>Stanford HAI, <a href="https://hai.stanford.edu/ai-index/2025-ai-index-report" target="_blank" rel="noopener">&ldquo;The 2025 AI Index Report,&rdquo;</a> 2025.</li>
     <li>Bartz v. Anthropic (N.D. Cal., 2025): <a href="https://www.wiggin.com/publication/bartz-v-anthropic-first-court-decision-on-fair-use-defense-in-llm-training/" target="_blank" rel="noopener">training ruled fair use, pirated sourcing not</a>; <a href="https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/" target="_blank" rel="noopener">$1.5 billion settlement</a>, 2025.</li>
-    <li>Creative Commons, <a href="https://creativecommons.org/2025/07/02/why-cc-signals-an-update/" target="_blank" rel="noopener">&ldquo;Why CC Signals,&rdquo;</a> 2025.</li>
+    <li>Creative Commons, <a href="https://creativecommons.org/2025/05/15/understanding-cc-licenses-and-ai-training-a-legal-primer/" target="_blank" rel="noopener">&ldquo;Understanding CC Licenses and AI Training: A Legal Primer,&rdquo;</a> 2025.</li>
+    <li>Creative Commons, <a href="https://creativecommons.org/2025/06/25/introducing-cc-signals-a-new-social-contract-for-the-age-of-ai/" target="_blank" rel="noopener">&ldquo;Introducing CC Signals,&rdquo;</a> 2025; <a href="https://creativecommons.org/2026/05/13/from-signals-to-infrastructure-strengthening-the-commons-for-the-ai-era/" target="_blank" rel="noopener">&ldquo;From Signals to Infrastructure,&rdquo;</a> 2026.</li>
+    <li>Open Future, <a href="https://openfuture.eu/publication/paradox-of-open-policies-for-the-digital-commons/" target="_blank" rel="noopener">&ldquo;The Paradox of Open,&rdquo;</a> 2023.</li>
+    <li>Stefaan G. Verhulst, <a href="https://sverhulst.medium.com/the-weaponisation-of-openness-toward-a-new-social-contract-for-data-in-the-ai-era-fb9f49ef6109" target="_blank" rel="noopener">&ldquo;The Weaponisation of Openness,&rdquo;</a> 2025.</li>
+    <li>Wikimedia Foundation, <a href="https://diff.wikimedia.org/2025/04/01/how-crawlers-impact-the-operations-of-the-wikimedia-projects/" target="_blank" rel="noopener">&ldquo;How crawlers impact the operations of the Wikimedia projects,&rdquo;</a> 2025; <a href="https://www.techtimes.com/articles/312606/20251110/wikipedia-wants-companies-stop-scraping-data-ai-training-offers-paid-api-access-instead.htm" target="_blank" rel="noopener">Enterprise API, 2025</a>.</li>
     <li>Deep et al., <a href="https://www.mdpi.com/2078-2489/16/10/905" target="_blank" rel="noopener">&ldquo;AI Detection Tools in Higher Education,&rdquo;</a> Information, 2025.</li>
   </ul>
 </div>
@@ -426,7 +453,7 @@
 <nav id="nav-bar" aria-label="Slide navigation">
   <button id="arrow-prev" class="arrow-btn" aria-label="Previous slide" title="Previous slide (&larr;)">&#8592;</button>
   <span class="nav-info"><strong id="nav-current">1</strong> / <span id="nav-total"></span></span>
-  <div id="scrubber-container" class="scrubber-container" role="slider" aria-label="Slide progress" aria-valuemin="1" aria-valuemax="28" aria-valuenow="1" aria-valuetext="Slide 1 of 28" tabindex="0">
+  <div id="scrubber-container" class="scrubber-container" role="slider" aria-label="Slide progress" aria-valuemin="1" aria-valuemax="29" aria-valuenow="1" aria-valuetext="Slide 1 of 29" tabindex="0">
     <div class="scrubber-track">
       <div id="scrubber-progress" class="scrubber-progress"></div>
       <div class="scrubber-thumb">
