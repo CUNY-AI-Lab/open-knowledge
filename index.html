@@ -52,8 +52,8 @@
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 2: Whether you use AI is your call" data-slide="framing" tabindex="-1">
   <span class="kicker">Before we start</span>
   <p class="pull">What kind of world are we <span class="hl">building</span> as we use this?</p>
-  <p class="lead" style="margin-top: 0.8em;">We won&rsquo;t tell you whether to use AI. We use it ourselves, so we have a stake in it, but the choice is yours.</p>
-  <p class="lead" style="margin-top: 0.6em;">We only ask that you look hard at what these tools do to your teaching and to the commons you work in before you decide. They&rsquo;re already everywhere, shaping how students work, and it&rsquo;s easy to adopt them without examining them. The Graduate Center&rsquo;s draft guidance leaves the decision to you.</p>
+  <p class="lead" style="margin-top: 0.8em;">We won&rsquo;t tell you whether to use AI. We use it ourselves, so we have a stake in it.</p>
+  <p class="lead" style="margin-top: 0.6em;">We only ask that you look hard at what these tools do to your teaching and to the commons you work in before you decide. They&rsquo;re in wide use already, including by your students, and it&rsquo;s easy to adopt them without examining them. The Graduate Center&rsquo;s draft guidance leaves the decision to you.</p>
   <p class="src">The question is Langdon Winner&rsquo;s: <a href="https://press.uchicago.edu/ucp/books/book/chicago/W/bo49911830.html" target="_blank" rel="noopener">&ldquo;Technologies as Forms of Life,&rdquo; The Whale and the Reactor, 1986</a>.</p>
 </div>
 
@@ -126,8 +126,8 @@
   <div class="content">
     <span class="kicker">A concrete example</span>
     <h2>Inside The Pile</h2>
-    <p style="margin-bottom: 0.7em;">Models rarely say what they trained on. <strong>The Pile</strong> is an exception: an 825&nbsp;GB corpus EleutherAI assembled and documented openly in 2020, so we can see what goes into a model.</p>
-    <p>It bundles 22 sources. Most are what an open-knowledge project would celebrate. One, Books3, is what the lawsuits are about. <strong>Open work and pirated books sit in the same pile.</strong></p>
+    <p style="margin-bottom: 0.7em;">Models rarely say what they trained on. <strong>The Pile</strong> is an exception. EleutherAI assembled and documented it openly in 2020, all 825&nbsp;GB, so we can see what goes into a model.</p>
+    <p>It bundles 22 sources. The most contested is &ldquo;Books3,&rdquo; about 196,000 books pulled from a pirate site.</p>
     <p class="src">On the corpus: <a href="https://pile.eleuther.ai/" target="_blank" rel="noopener">Gao et al., &ldquo;The Pile,&rdquo; EleutherAI, 2020</a>; on the Books3 takedown, <a href="https://en.wikipedia.org/wiki/The_Pile_(dataset)" target="_blank" rel="noopener">Wikipedia, 2023</a>.</p>
   </div>
   <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
@@ -152,7 +152,7 @@
 <div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 9: Plausible doesn't mean true" data-slide="plausible" tabindex="-1">
   <span class="kicker">A caution</span>
   <h2>Confidently wrong</h2>
-  <p class="lead" style="margin-bottom: 0.8em;">Because it&rsquo;s built to produce what <em>sounds</em> right, it can sound sure and be wrong.</p>
+  <p class="lead" style="margin-bottom: 0.8em;">It often sounds confident when it&rsquo;s wrong.</p>
   <div class="grid-2">
     <div class="card" style="border-left-color: var(--accent-red);"><h4>It invents things</h4><p style="font-size:1.05em;">Citations and quotes that never existed, written as confidently as the true ones.</p></div>
     <div class="card" style="border-left-color: var(--accent-amber);"><h4>It carries its patterns</h4><p style="font-size:1.05em;">Including the skews in the text it learned from, which show up unevenly in what it produces.</p></div>
@@ -164,7 +164,7 @@
 <div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 10: From guessing to grounded" data-slide="grounded" tabindex="-1">
   <div class="content">
     <span class="kicker">The problem &amp; the fix</span>
-    <h2>From a guess to a grounded answer</h2>
+    <h2>Grounding the answer</h2>
     <p style="margin-bottom: 0.6em;">Ask a plain model for today&rsquo;s weather and it makes a confident guess, with no live data behind it and no way to reach today&rsquo;s forecast.</p>
     <p style="margin-bottom: 0.4em;">Newer systems can reach outside themselves with a few <strong>tools</strong>:</p>
     <ul style="line-height:1.85; margin-bottom: 0.5em;">
@@ -194,8 +194,7 @@
   <div class="content">
     <span class="kicker">Agentic</span>
     <h2>Working in a loop</h2>
-    <p style="margin-bottom: 0.7em;">A plain chatbot answers your question and stops.</p>
-    <p>An <strong>agentic</strong> one keeps going. It looks at a result, decides what to do next, calls another tool, and repeats until the task is done, taking several steps toward a goal on its own.</p>
+    <p>An <strong>agentic</strong> system doesn&rsquo;t stop at one answer. It looks at a result, decides what to do next, calls another tool, and repeats until the task is done, taking several steps toward a goal on its own.</p>
   </div>
   <div class="stage" style="background: var(--bg-panel);">
     <img src="images/steve-agentic-loop-handdrawn.png" alt="A hand-drawn loop: ask, look at the result, decide, call a tool, and repeat until the task is done." class="screenshot-img">
@@ -214,11 +213,9 @@
 <!-- 15 — THE OPEN TENSION, build 1 of 2: the diagnosis -->
 <div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 13: What happens to open" data-slide="worry-open" tabindex="-1">
   <div class="content">
-    <span class="kicker">The worry that&rsquo;s ours</span>
     <h2>What happens to &ldquo;open&rdquo;</h2>
     <p style="margin-bottom: 0.6em;">When you license work openly, anyone may reuse it, so long as they credit you and give back to the commons. <strong>AI training uses the work without crediting it or giving anything back.</strong></p>
-    <p style="margin-bottom: 0.6em;">The more openly you license, the easier your work is to ingest. Paywalled writing had some friction protecting it; openly licensed work has none.</p>
-    <p>The first reflex is to lock it down or add a no-AI clause. But locking down would shrink the commons even further. Researchers call that retreat a <em>&ldquo;data winter.&rdquo;</em></p>
+    <p>Openly licensed work is the easiest to ingest, because anyone may copy it.</p>
     <p class="src">On openness as its own vulnerability: <a href="https://openfuture.eu/publication/paradox-of-open-policies-for-the-digital-commons/" target="_blank" rel="noopener">Open Future, &ldquo;The Paradox of Open&rdquo;</a>; <a href="https://sverhulst.medium.com/the-weaponisation-of-openness-toward-a-new-social-contract-for-data-in-the-ai-era-fb9f49ef6109" target="_blank" rel="noopener">Verhulst, &ldquo;The Weaponisation of Openness,&rdquo; 2025</a>.</p>
   </div>
   <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
@@ -234,46 +231,41 @@
 
 <!-- WORRY — AI eats the audience -->
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 14: AI eats the audience" data-slide="worry-audience" tabindex="-1">
-  <span class="kicker">Close to home</span>
   <h2>AI eats the audience</h2>
   <p class="lead center-narrow" style="margin-bottom: 0.6em;">When AI answers the question, people stop clicking through to the source.</p>
-  <p class="center-narrow">Referral traffic to open sites has fallen hard this year, and Wikipedia&rsquo;s human visits are sliding even as the bots scraping it climb. For a commons that runs on volunteers, the readers are also where the editors come from. Fewer readers leaves fewer volunteers to keep it running.</p>
+  <p class="center-narrow">On a volunteer-run commons, the readers are also the people who maintain it. Referral traffic to open sites has fallen hard this year, and Wikipedia&rsquo;s human visits are sliding even as the bots scraping it climb.</p>
   <p class="src">On the referral collapse: <a href="https://www.adexchanger.com/publishers/the-ai-search-reckoning-is-dismantling-open-web-traffic-and-publishers-may-never-recover/" target="_blank" rel="noopener">AdExchanger, 2025</a>; on Wikipedia&rsquo;s human traffic and crawler load, <a href="https://diff.wikimedia.org/2025/04/01/how-crawlers-impact-the-operations-of-the-wikimedia-projects/" target="_blank" rel="noopener">Wikimedia, 2025</a>.</p>
 </div>
 
 <!-- WORRY — publishers sold your scholarship -->
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 15: Sold over your head" data-slide="worry-publishers" tabindex="-1">
-  <span class="kicker">Close to home</span>
   <h2>Sold over your head</h2>
   <p class="lead center-narrow" style="margin-bottom: 0.6em;">Your publisher can license your work to AI companies without asking you.</p>
-  <p class="center-narrow">The publishers that hold the copyright signed the deals: Taylor &amp; Francis took $10 million from Microsoft, Wiley $44 million, and by the Authors Guild&rsquo;s account no authors were asked or paid. And it was the closed, paywalled work that got sold, where you&rsquo;d already handed copyright to a publisher. Closing your work off doesn&rsquo;t protect it either.</p>
+  <p class="center-narrow">The publishers that hold the copyright signed the deals. Taylor &amp; Francis took $10 million from Microsoft, Wiley $44 million, and by the Authors Guild&rsquo;s account no authors were asked or paid. The work they sold was the closed, paywalled kind that authors sign over to publishers.</p>
   <p class="src">On the publisher&ndash;AI licensing deals: <a href="https://www.thebookseller.com/comment/academic-publishers-and-ai-one-year-on" target="_blank" rel="noopener">The Bookseller, 2025</a>; <a href="https://authorsguild.org/advocacy/artificial-intelligence/ai-licensing-what-authors-should-know/" target="_blank" rel="noopener">Authors Guild</a>.</p>
 </div>
 
 <!-- 16 — THE OPEN TENSION, build 2 of 2: no individual exit -->
 <div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 16: You can't license your way out" data-slide="worry-no-exit" tabindex="-1">
-  <span class="kicker">Where that leaves you</span>
   <h2>You can&rsquo;t license your way out</h2>
   <p class="lead center-narrow" style="margin-bottom: 0.6em;">Adding a no-AI or non-commercial clause won&rsquo;t stop AI training. Creative Commons, which created these licenses, says so itself.</p>
-  <p class="center-narrow">In 2025 courts ruled that training is fair use even on copyrighted work; Anthropic paid $1.5 billion only for pirating the books, not for training on them. Since training is already fair use, a restrictive license mostly gets in the way of the people who would reuse your work. The model isn&rsquo;t bound by it. The responses with any force are collective ones, like CC&rsquo;s preference signals or Wikimedia charging the scrapers for access. All of it is early and contested. We don&rsquo;t think it&rsquo;s solved, and that&rsquo;s where we want to start the discussion.</p>
+  <p class="center-narrow">In 2025 courts ruled that training is fair use even on copyrighted work; Anthropic paid $1.5 billion only for pirating the books, not for training on them. Since training is already fair use, a restrictive license mostly gets in the way of the people who would reuse your work. The model isn&rsquo;t bound by it. The responses with any force are collective ones, like CC&rsquo;s preference signals or Wikimedia charging scrapers for access.</p>
   <p class="src">CC licenses can&rsquo;t block training: <a href="https://creativecommons.org/2025/05/15/understanding-cc-licenses-and-ai-training-a-legal-primer/" target="_blank" rel="noopener">CC legal primer, 2025</a>. The ruling: <a href="https://www.wiggin.com/publication/bartz-v-anthropic-first-court-decision-on-fair-use-defense-in-llm-training/" target="_blank" rel="noopener">Bartz v. Anthropic</a> + <a href="https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/" target="_blank" rel="noopener">$1.5B settlement</a>. Collective responses: <a href="https://creativecommons.org/2026/05/13/from-signals-to-infrastructure-strengthening-the-commons-for-the-ai-era/" target="_blank" rel="noopener">CC, &ldquo;From Signals to Infrastructure,&rdquo; 2026</a>; <a href="https://www.techtimes.com/articles/312606/20251110/wikipedia-wants-companies-stop-scraping-data-ai-training-offers-paid-api-access-instead.htm" target="_blank" rel="noopener">Wikimedia paid API, 2025</a>.</p>
 </div>
 
 <!-- WEIGHTS — open vs closed weights, for OER -->
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 17: Open vs closed weights" data-slide="worry-weights" tabindex="-1">
-  <span class="kicker">Close to home</span>
   <h2>Open vs closed weights</h2>
   <p class="lead center-narrow" style="margin-bottom: 0.6em;">An OER built on a closed, commercial model isn&rsquo;t really open.</p>
-  <p class="center-narrow">The content can be open, but the model isn&rsquo;t. You can&rsquo;t run it or change it yourself, and it sits behind a paid account, the cost and gatekeeping OER was built to remove. Open-weight models give that back, and they&rsquo;ve nearly caught up on capability, though &ldquo;open weights&rdquo; still isn&rsquo;t &ldquo;open source&rdquo; (most withhold the data and code) and they need hardware to run.</p>
+  <p class="center-narrow">Even when the content is openly licensed, the model underneath stays closed. You can&rsquo;t run it or change it yourself, and using it requires a paid account. Open-weight models can be run and changed by anyone, and they&rsquo;ve nearly caught up on capability, though &ldquo;open weights&rdquo; still isn&rsquo;t &ldquo;open source&rdquo; (most withhold the data and code) and they need hardware to run.</p>
   <p class="src">On the 5&nbsp;R&rsquo;s and what counts as open: <a href="https://opencontent.org/definition/" target="_blank" rel="noopener">Wiley, &ldquo;Defining the &lsquo;Open&rsquo;&rdquo;</a>; on proprietary AI vs. open education, <a href="https://www.unesco.org/en/articles/open-education-principles-resisting-metrics-ai-black-boxes" target="_blank" rel="noopener">UNESCO, 2024</a>; &ldquo;open weights&rdquo; &ne; &ldquo;open source,&rdquo; <a href="https://opensource.org/blog/metas-llama-license-is-still-not-open-source" target="_blank" rel="noopener">OSI, 2024</a>; the compute divide, <a href="https://societyandai.org/perspectives/beyond-the-open-weights/" target="_blank" rel="noopener">Society &amp; AI, 2025</a>.</p>
 </div>
 
 <!-- THE OPEN ANSWER — public AI -->
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 18: The open answer, public AI" data-slide="public-ai" tabindex="-1">
-  <span class="kicker">Where this points</span>
   <h2>Public AI</h2>
-  <p class="lead center-narrow" style="margin-bottom: 0.7em;">A closed model is owned and run by one company that decides who can use it and how. The company still controls it, no matter how you use it. With open models, anyone can run them and the public governs them. Smaller versions already exist.</p>
-  <div class="tip-box center-narrow"><p><strong>Our lab is one of them.</strong> It&rsquo;s public and non-commercial, runs open-weight models, and doesn&rsquo;t store your data.</p></div>
+  <p class="lead center-narrow" style="margin-bottom: 0.7em;">A closed model is owned and run by one company that decides who can use it and how. Open models can be run by anyone and are governed in public, and smaller ones already exist.</p>
+  <div class="tip-box center-narrow"><p><strong>Our lab runs on models like these.</strong> It&rsquo;s a public service and stores none of your data.</p></div>
   <p class="src">On politics built into technology: <a href="https://www.lucy.cam.ac.uk/sites/default/files/inline-files/Langdon%20Winner%20Do%20Artifacts%20have%20Politics.pdf" target="_blank" rel="noopener">Winner, &ldquo;Do Artifacts Have Politics?&rdquo; 1980</a>; on public AI, <a href="https://openfuture.eu/our-work/ai-and-the-commons/" target="_blank" rel="noopener">Open Future</a>; <a href="https://policyreview.info/articles/news/ai-commons/2055" target="_blank" rel="noopener">Internet Policy Review, 2025</a>.</p>
 </div>
 
@@ -283,7 +275,7 @@
     <span class="kicker">Who we are</span>
     <h2>The CUNY AI Lab</h2>
     <p style="margin-bottom: 0.7em;">A faculty- and staff-led group at the Graduate Center. We build and run AI infrastructure for teaching and research across CUNY.</p>
-    <p>It&rsquo;s a public, non-commercial service. It doesn&rsquo;t train on your data, and it uses open models where it can.</p>
+    <p>It&rsquo;s a public, non-commercial service. It runs on open models and doesn&rsquo;t train on your data.</p>
   </div>
   <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(20px, 3vw, 44px); background: var(--bg-light);">
     <p class="kicker" style="text-align:center;">A collaboration across</p>
@@ -401,7 +393,7 @@
     <span class="kicker">Project &middot; Stefano Morello</span>
     <h2>Italian American Open Syllabus</h2>
     <p style="margin-bottom:0.7em;">A curated, peer-reviewed collection of open essays and reading lists on Italian-American literature and culture, published openly on Manifold.</p>
-    <p>Where AI helped: I built a <strong>skill</strong> that converts contributions I receive in Word into clean, parsed HTML and attaches a stylesheet. AI&rsquo;s main job was the <strong>CSS</strong>, while the editing and scholarship stayed mine.</p>
+    <p>Where AI helped: I built a <strong>skill</strong> that converts contributions I receive in Word into clean, parsed HTML and attaches a stylesheet. AI mostly handled the <strong>CSS</strong>. The editing and scholarship were mine.</p>
   </div>
   <div class="stage stage-embed">
     <div class="browser-frame">
@@ -442,7 +434,7 @@
     <span class="kicker">Project &middot; Zach Muhlbauer</span>
     <h2>Cloze Reader</h2>
     <p style="margin-bottom:0.6em;">A reading-practice tool that turns passages into cloze (fill-in-the-blank) exercises that scaffold close reading and vocabulary.</p>
-    <p>An OER built by one of today&rsquo;s presenters, small, focused, and free to use.</p>
+    <p>An OER built by one of today&rsquo;s presenters, small and free to use.</p>
   </div>
   <div class="stage stage-embed">
     <div class="browser-frame">
