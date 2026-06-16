@@ -599,6 +599,8 @@ body.overview-mode #deck { background: #E4DAC8; }
   max-width: 980px;
   margin: 1.4em auto 0;
 }
+/* four-item variant → balanced 2x2 */
+.axes.four { grid-template-columns: repeat(2, 1fr); max-width: 920px; }
 .axis {
   background: var(--paper);
   border: 1px solid var(--hairline);
@@ -1262,7 +1264,7 @@ a.offer:focus-visible { outline: 2px solid var(--accent-cyan); outline-offset: 3
 
 /* ---------- PHONES: everything single column ---------- */
 @media (max-width: 560px) {
-  .offer-grid, .principle-grid, .people-row, .axes, .disc-grid, .model-grid { grid-template-columns: 1fr; }
+  .offer-grid, .principle-grid, .people-row, .axes, .axes.four, .disc-grid, .model-grid { grid-template-columns: 1fr; }
   .grid-2, .grid-3, .comparison { grid-template-columns: 1fr; }
   .logo-wall { grid-template-columns: 1fr 1fr; max-width: 360px; gap: 12px; }
   .logo-cell { height: clamp(86px, 26vw, 120px); }
