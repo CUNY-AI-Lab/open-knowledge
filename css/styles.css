@@ -650,22 +650,23 @@ blockquote {
   align-items: center;
   gap: 0;
   width: 100%;
-  max-width: 240px;
+  max-width: 520px;
   margin: 0 auto;
   position: relative;
 }
 
 .flow-node {
   text-align: center;
-  padding: clamp(10px, 1.2vh, 16px) clamp(14px, 1.8vw, 24px);
+  padding: clamp(16px, 2vh, 26px) clamp(20px, 2.6vw, 34px);
   border-radius: 12px;
   position: relative;
   flex-shrink: 0;
   width: 100%;
+  box-shadow: 0 8px 26px rgba(21, 35, 59, 0.10);
 }
 
 .flow-node-icon {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-size: clamp(2rem, 3.4vw, 2.7rem);
   margin-bottom: 6px;
   line-height: 1;
 }
@@ -673,21 +674,21 @@ blockquote {
 .flow-node-label {
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
-  font-size: clamp(0.88rem, 1.2vw, 1.02rem);
+  font-size: clamp(18px, 1.55vw, 24px);
   color: var(--text-dark);
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 .flow-node-desc {
-  font-size: clamp(0.74rem, 1vw, 0.86rem);
+  font-size: clamp(15px, 1.2vw, 18px);
   color: var(--text-dark);
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .flow-node-code {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 500;
-  font-size: clamp(0.82rem, 1.1vw, 0.95rem);
+  font-size: clamp(0.94rem, 1.22vw, 1.08rem);
   color: var(--text-dark);
 }
 
@@ -942,7 +943,7 @@ blockquote {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 400px;
+  max-width: 520px;
   margin: 0 auto;
 }
 

@@ -87,8 +87,9 @@
   code { font-size: 0.8em; }
   pre { font-size: 0.75em; overflow-x: auto; }
 
-  .flow-node { padding: clamp(6px, 1.5vh, 10px) clamp(6px, 1vw, 12px); }
-  .flow-node-label { font-size: 0.7rem; }
+  .flow-node { padding: clamp(10px, 1.7vh, 14px) clamp(10px, 2vw, 16px); }
+  .flow-node-label { font-size: 0.9rem; }
+  .flow-node-desc { font-size: 0.78rem; }
 
   .modal-prompt { width: 90vw; max-height: 85vh; }
 }

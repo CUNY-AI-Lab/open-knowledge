@@ -14,16 +14,14 @@
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/theme-light.css">
 <style>
+  .layout-content > .center-narrow { margin-left: 0; margin-right: 0; }
   .src { font-size: 0.8em; color: var(--ink-soft, #6b6256); margin-top: 0.8em; }
   .src a { color: var(--accent-blue); text-decoration: underline; text-underline-offset: 2px; }
   .src-list { columns: 2; column-gap: 2.4em; max-width: 1120px; margin: 0.4em auto 0; font-size: 0.78em; line-height: 1.35; }
   .src-list li { break-inside: avoid; margin-bottom: 0.38em; }
   .src-list a { color: var(--accent-blue); text-decoration: underline; text-underline-offset: 2px; }
-  /* Alignment: commit to left on content slides. Title and Part dividers stay centered. */
-  .layout-content { align-items: flex-start; text-align: left; }
-  .layout-content .center-narrow,
-  .layout-content .axes,
-  .layout-content .disc-grid { margin-left: 0; margin-right: 0; }
+  .compact-bullets { margin: 0.2em 0 0.7em; padding-left: 1.1em; }
+  .compact-bullets li { margin: 0.22em 0; }
 </style>
 </head>
 <body>
@@ -55,85 +53,85 @@
 
 <!-- 3 — OUR STANCE -->
 <div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 2: Whether you use AI is your call" data-slide="framing" tabindex="-1">
-  <p class="pull">What kind of world are we <span class="hl">building</span> as we use this?</p>
-  <p class="lead" style="margin-top: 0.8em;">We won&rsquo;t tell you whether to use AI. We use it ourselves, so we have a stake in it.</p>
-  <p class="lead" style="margin-top: 0.6em;">We only ask that you look hard at what these tools do to your teaching and to the commons you work in before you decide. They&rsquo;re in wide use already, including by your students, and it&rsquo;s easy to adopt them without examining them. The Graduate Center&rsquo;s draft guidance leaves the decision to you.</p>
-  <p class="src">The question is Langdon Winner&rsquo;s: <a href="https://press.uchicago.edu/ucp/books/book/chicago/W/bo49911830.html" target="_blank" rel="noopener">&ldquo;Technologies as Forms of Life,&rdquo; The Whale and the Reactor, 1986</a>.</p>
+  <p class="pull">What kind of world are we <span class="hl">building</span> as we use AI?</p>
+  <p class="lead" style="margin-top: 0.8em;">Langdon Winner asks us to look at technologies as forms of life, not just tools. AI is already part of teaching and learning, including for students, and the Graduate Center&rsquo;s draft guidance leaves decisions about AI use to you. Before you use it in teaching or OER work, ask what AI changes in your classroom and in the knowledge commons in which you participate.</p>
+  <p class="src"><a href="https://press.uchicago.edu/ucp/books/book/chicago/W/bo49911830.html" target="_blank" rel="noopener">Langdon Winner, &ldquo;Technologies as Forms of Life,&rdquo; <em>The Whale and the Reactor</em>, 1986</a>.</p>
 </div>
 
-<!-- ============ PART I — WHAT AI IS ============ -->
-<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 3: Part One, What AI Is" data-slide="div-1" tabindex="-1">
+<!-- ============ PART I — AI BASICS ============ -->
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 3: Part One, AI basics" data-slide="div-1" tabindex="-1">
   <span class="ghost" aria-hidden="true">I</span>
   <span class="section-label">Part I</span>
-  <h2>What AI Is</h2>
+  <h2>AI basics</h2>
   <div class="divider-line"></div>
 </div>
 
-<!-- 5 — YOU'VE USED THESE -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 4: You've probably used one" data-slide="used-these" tabindex="-1">
-  <div class="content">
-    <h2>The chatbots you know</h2>
-    <p style="margin-bottom: 0.7em;">ChatGPT, Claude, Copilot, Gemini. The basic experience is familiar. You type something, and it types back.</p>
-  </div>
-  <div class="stage" style="background: var(--bg-panel);">
-    <img src="images/steve-hello-chat.png" alt="A chat interface: the user says 'Hello!' and the assistant replies warmly and asks how it can help." class="screenshot-img">
-  </div>
-</div>
-
 <!-- 6 — PREDICTS TEXT -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 5: It predicts the next piece of text" data-slide="what-is-llm" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 4: Large language models predict tokens" data-slide="what-is-llm" tabindex="-1">
   <div class="content">
-    <h2>Predicting the next piece of text</h2>
-    <p style="margin-bottom: 0.7em;">When the model answers, it generates a likely continuation of your text, one piece at a time. It isn&rsquo;t looking anything up.</p>
-    <p>It repeats that step to produce each answer.</p>
+    <h2>Large language models predict tokens</h2>
+    <p style="margin-bottom: 0.7em;">A large language model (LLM) generates an answer through <strong>inference</strong>. Inference builds the <strong>output</strong> one token at a time.</p>
+    <p>A <strong>token</strong> can be a word, part of a word, a number, or punctuation. The model reads the <strong>context</strong>, predicts the next token, adds it, and repeats.</p>
   </div>
   <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
-    <div style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:340px; margin:0 auto;">
-      <div class="flow-node flow-student"><div class="flow-node-label">Tokens</div><div class="flow-node-desc">Your text is split into word-sized pieces</div></div>
+    <div style="display:flex; flex-direction:column; gap:12px; width:100%; max-width:430px; margin:0 auto;">
+      <div class="flow-node flow-student"><div class="flow-node-label">Inference</div><div class="flow-node-desc">The LLM generates an answer</div></div>
       <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-blue)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-      <div class="flow-node" style="background:var(--paper); border:2px solid rgba(59,111,181,0.3); border-radius:12px;"><div class="flow-node-label">Numbers</div><div class="flow-node-desc">Pieces become numbers the model can do math on</div></div>
+      <div class="flow-node" style="background:var(--paper); border:2px solid rgba(59,111,181,0.3); border-radius:12px;"><div class="flow-node-label">Tokens</div><div class="flow-node-desc">Text becomes word pieces, numbers, or punctuation</div></div>
       <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-cyan)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-      <div class="flow-node" style="background:rgba(78,205,196,0.08); border:2px solid rgba(78,205,196,0.35); border-radius:12px;"><div class="flow-node-label">Weighing</div><div class="flow-node-desc">It weighs which earlier words matter most</div></div>
+      <div class="flow-node" style="background:rgba(78,205,196,0.08); border:2px solid rgba(78,205,196,0.35); border-radius:12px;"><div class="flow-node-label">Context</div><div class="flow-node-desc">The prompt plus output generated so far</div></div>
       <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-green)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-      <div class="flow-node flow-response" style="border-radius:12px;"><div class="flow-node-label">Next piece, then repeat</div><div class="flow-node-desc">Pick a likely next piece, then do it again</div></div>
+      <div class="flow-node flow-response" style="border-radius:12px;"><div class="flow-node-label">Next-token prediction</div><div class="flow-node-desc">The model adds one token and repeats</div></div>
     </div>
   </div>
 </div>
 
 <!-- 8 — HOW IT'S TRAINED -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 6: How it's trained" data-slide="how-trained" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 6: How large language models are trained" data-slide="how-trained" tabindex="-1">
   <div class="content">
-    <h2>How a model learns</h2>
-    <p style="margin-bottom: 0.7em;">It learns to guess the next piece by reading an enormous amount of text and adjusting itself, over and over, to guess a little better. Afterward, people tune it with feedback on which answers are better.</p>
-    <p style="margin-bottom: 0.7em;">The text it learns from is scraped from across the public web, books and code included, very likely with open materials like the ones you make.</p>
-    <div class="tip-box" style="margin-top: 0.4em;"><p><strong>Where the text came from, and who agreed to it,</strong> is something we come back to in the worries.</p></div>
+    <h2>How large language models are trained</h2>
+    <p style="margin-bottom: 0.7em;">Training repeats one task at huge scale. The model guesses a hidden next token, checks the guess, and shifts its weights.</p>
+    <p style="margin-bottom: 0.7em;">Later tuning uses examples and human rankings.</p>
+    <p class="src">Sources. <a href="https://arxiv.org/abs/2005.14165" target="_blank" rel="noopener">Brown et al., 2020</a>; <a href="https://arxiv.org/abs/2203.02155" target="_blank" rel="noopener">Ouyang et al., 2022</a>.</p>
   </div>
-  <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
-    <div style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:360px; margin:0 auto;">
-      <div class="flow-node flow-student"><div class="flow-node-label">The open web &middot; books &middot; code</div><div class="flow-node-desc">Scraped at scale &mdash; often without asking</div></div>
+  <div class="stage training-flow-stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
+    <div class="training-flow" style="display:flex; flex-direction:column; gap:12px; width:100%; max-width:440px; margin:0 auto;">
+      <div class="flow-node flow-student"><div class="flow-node-label">Training text</div><div class="flow-node-desc">A long path of tokens from web pages, books, code, articles, and other sources</div></div>
       <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-blue)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-      <div class="flow-node" style="background:var(--paper); border:2px solid rgba(59,111,181,0.3); border-radius:12px;"><div class="flow-node-label">Training</div><div class="flow-node-desc">Adjust itself to predict that text better</div></div>
+      <div class="flow-node" style="background:var(--paper); border:2px solid rgba(59,111,181,0.3); border-radius:12px;"><div class="flow-node-label">Guess and check</div><div class="flow-node-desc">The model predicts the next token, then compares it with the real one</div></div>
       <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-cyan)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-      <div class="flow-node" style="background:rgba(78,205,196,0.08); border:2px solid rgba(78,205,196,0.35); border-radius:12px;"><div class="flow-node-label">Human feedback</div><div class="flow-node-desc">People rate answers to steer its behavior</div></div>
+      <div class="flow-node" style="background:rgba(78,205,196,0.08); border:2px solid rgba(78,205,196,0.35); border-radius:12px;"><div class="flow-node-label">Weights shift</div><div class="flow-node-desc">The math changes so the next guess is closer</div></div>
       <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-green)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-      <div class="flow-node flow-response" style="border-radius:12px;"><div class="flow-node-label">The model</div><div class="flow-node-desc">A fixed set of patterns it predicts from</div></div>
+      <div class="flow-node flow-response" style="border-radius:12px;"><div class="flow-node-label">Human rankings</div><div class="flow-node-desc">Later tuning teaches the model which answers people prefer</div></div>
     </div>
   </div>
 </div>
 
 <!-- 8 — THE PILE (concrete training corpus) -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 7: Inside The Pile" data-slide="the-pile" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 7: Unpacking The Pile" data-slide="the-pile" tabindex="-1">
   <div class="content">
-    <h2>Inside The Pile</h2>
-    <p style="margin-bottom: 0.7em;">Models rarely say what they trained on. <strong>The Pile</strong> is an exception. EleutherAI assembled and documented it openly in 2020, all 825&nbsp;GB, so we can see what goes into a model.</p>
-    <p>It bundles 22 sources. The most contested is &ldquo;Books3,&rdquo; about 196,000 books pulled from a pirate site.</p>
-    <p class="src">On the corpus: <a href="https://pile.eleuther.ai/" target="_blank" rel="noopener">Gao et al., &ldquo;The Pile,&rdquo; EleutherAI, 2020</a>; on the Books3 takedown, <a href="https://en.wikipedia.org/wiki/The_Pile_(dataset)" target="_blank" rel="noopener">Wikipedia, 2023</a>.</p>
+    <h2>Unpacking The Pile</h2>
+    <p style="margin-bottom: 0.7em;">Many commercial AI companies hide or obfuscate their training data. EleutherAI documented <strong>The Pile</strong>, an 825&nbsp;GiB English corpus assembled in 2020.</p>
+    <ul class="compact-bullets">
+      <li>Built from 22 text sources</li>
+      <li>Created for large language model training</li>
+      <li>Includes Wikipedia, Project Gutenberg, Stack Exchange, GitHub, arXiv, PubMed Central, FreeLaw, and Books3</li>
+    </ul>
+    <p>Books3 is the contested part. It contains about 196,000 books copied from Bibliotik, a private book-piracy site.</p>
+    <p class="src">Sources. <a href="https://arxiv.org/abs/2101.00027" target="_blank" rel="noopener">Gao et al., &ldquo;The Pile,&rdquo; 2020</a>; <a href="https://arxiv.org/abs/2201.07311" target="_blank" rel="noopener">Biderman, Bicheno, and Gao, &ldquo;Datasheet for the Pile,&rdquo; 2022</a>.</p>
   </div>
   <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
-    <div style="display:flex; flex-direction:column; gap:12px; width:100%; max-width:380px; margin:0 auto;">
-      <div class="flow-node" style="background:rgba(78,205,196,0.08); border:2px solid rgba(78,205,196,0.4); border-radius:12px;"><div class="flow-node-label">The open &amp; public</div><div class="flow-node-desc">Wikipedia &middot; Project Gutenberg &middot; Stack Exchange &middot; GitHub</div></div>
-      <div class="flow-node" style="background:rgba(59,111,181,0.08); border:2px solid rgba(59,111,181,0.4); border-radius:12px;"><div class="flow-node-label">The scholarly</div><div class="flow-node-desc">arXiv &middot; PubMed Central &middot; NIH &middot; FreeLaw</div></div>
-      <div class="flow-node" style="background:rgba(214,69,65,0.08); border:2px solid rgba(214,69,65,0.45); border-radius:12px;"><div class="flow-node-label">The taken</div><div class="flow-node-desc">&ldquo;Books3&rdquo; &mdash; ~196,000 pirated books (pulled offline, 2023)</div></div>
+    <div class="pile-viz" aria-label="Largest Pile components by effective size">
+      <div class="pile-viz-title">Largest components by effective size</div>
+      <div class="pile-bar"><span class="pile-label">Pile-CC</span><span class="pile-track"><span style="width: 100%;" aria-hidden="true">&nbsp;</span></span><span class="pile-value">18.1%</span></div>
+      <div class="pile-bar"><span class="pile-label">PubMed Central</span><span class="pile-track"><span style="width: 79.5%;" aria-hidden="true">&nbsp;</span></span><span class="pile-value">14.4%</span></div>
+      <div class="pile-bar contested"><span class="pile-label">Books3</span><span class="pile-track"><span style="width: 66.6%;" aria-hidden="true">&nbsp;</span></span><span class="pile-value">12.1%</span></div>
+      <div class="pile-bar"><span class="pile-label">OpenWebText2</span><span class="pile-track"><span style="width: 55.3%;" aria-hidden="true">&nbsp;</span></span><span class="pile-value">10.0%</span></div>
+      <div class="pile-bar"><span class="pile-label">arXiv</span><span class="pile-track"><span style="width: 49.5%;" aria-hidden="true">&nbsp;</span></span><span class="pile-value">9.0%</span></div>
+      <div class="pile-bar"><span class="pile-label">GitHub</span><span class="pile-track"><span style="width: 41.9%;" aria-hidden="true">&nbsp;</span></span><span class="pile-value">7.6%</span></div>
+      <div class="pile-bar"><span class="pile-label">FreeLaw</span><span class="pile-track"><span style="width: 33.8%;" aria-hidden="true">&nbsp;</span></span><span class="pile-value">6.1%</span></div>
+      <div class="pile-bar"><span class="pile-label">Stack Exchange</span><span class="pile-track"><span style="width: 28.3%;" aria-hidden="true">&nbsp;</span></span><span class="pile-value">5.1%</span></div>
+      <div class="pile-rest">Bars are scaled against Pile-CC. The percentages show each source&rsquo;s share of The Pile; 14 smaller sources make up the remaining 18%.</div>
     </div>
   </div>
 </div>
@@ -148,21 +146,21 @@
 
 <!-- CONFIDENTLY WRONG — the flaw, right before its fix -->
 <div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 9: Plausible doesn't mean true" data-slide="plausible" tabindex="-1">
-  <h2>Confidently wrong</h2>
-  <p class="lead" style="margin-bottom: 0.8em;">It often sounds confident when it&rsquo;s wrong.</p>
+  <h2>Rewarded for guessing</h2>
+  <p class="lead" style="margin-bottom: 0.8em;">Kalai et al. argue that hallucinations persist because training and evaluation reward guessing over acknowledging uncertainty.</p>
   <div class="grid-2">
-    <div class="card" style="border-left-color: var(--accent-red);"><h4>It invents things</h4><p style="font-size:1.05em;">Citations and quotes that never existed, written as confidently as the true ones.</p></div>
-    <div class="card" style="border-left-color: var(--accent-amber);"><h4>It carries its patterns</h4><p style="font-size:1.05em;">Including the skews in the text it learned from, which show up unevenly in what it produces.</p></div>
+    <div class="card" style="border-left-color: var(--accent-red);"><h4>Pretraining learns patterns</h4><p style="font-size:1.05em;">For rare facts, the model often relies on nearby patterns, so a wrong answer can sound fluent.</p></div>
+    <div class="card" style="border-left-color: var(--accent-amber);"><h4>Benchmarks reward test-taking</h4><p style="font-size:1.05em;">Accuracy scoreboards give credit for a lucky guess and no credit for uncertainty.</p></div>
   </div>
-  <p class="src">Models are trained in a way that rewards a confident guess over an honest &ldquo;I don&rsquo;t know.&rdquo; Source: <a href="https://arxiv.org/abs/2509.04664" target="_blank" rel="noopener">Kalai et al. (OpenAI &amp; Georgia Tech), 2025</a>.</p>
+  <p class="src">On hallucination incentives: <a href="https://arxiv.org/abs/2509.04664" target="_blank" rel="noopener">Kalai et al. (OpenAI &amp; Georgia Tech), &ldquo;Why Language Models Hallucinate,&rdquo; 2025</a>.</p>
 </div>
 
 <!-- 11 — GUESSING -> GROUNDED + TOOLS (merged) -->
 <div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 10: From guessing to grounded" data-slide="grounded" tabindex="-1">
   <div class="content">
     <h2>Grounding the answer</h2>
-    <p style="margin-bottom: 0.6em;">Ask a plain model for today&rsquo;s weather and it makes a confident guess, with no live data behind it and no way to reach today&rsquo;s forecast.</p>
-    <p style="margin-bottom: 0.4em;">Newer systems can reach outside themselves with a few <strong>tools</strong>:</p>
+    <p style="margin-bottom: 0.6em;">Prompt a frontier model for today&rsquo;s weather. A grounded system searches a live source before answering.</p>
+    <p style="margin-bottom: 0.4em;">Tools let the model use information outside its training data.</p>
     <ul style="line-height:1.85; margin-bottom: 0.5em;">
       <li><strong>Search</strong> the web or a catalog</li>
       <li><strong>Read</strong> a file you give it</li>
@@ -171,9 +169,9 @@
     <p class="embed-hint" style="text-align:left;">&larr; Click to compare the guess with the grounded answer.</p>
   </div>
   <div class="stage">
-    <div class="carousel cap-overlay" data-interval="9000">
+    <div class="carousel cap-overlay weather-carousel" data-interval="9000">
       <div class="carousel-item active">
-        <img src="images/steve-weather-ungrounded.png" alt="A model guessing the New York weather from training patterns, with no live data.">
+        <img src="images/steve-weather-ungrounded.png" alt="A model guessing the New York weather from training patterns.">
         <div class="carousel-caption"><strong>Ungrounded</strong><br>A plausible guess from patterns, not today&rsquo;s forecast.</div>
       </div>
       <div class="carousel-item">
@@ -189,10 +187,15 @@
 <div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 11: Agentic means it loops" data-slide="loop" tabindex="-1">
   <div class="content">
     <h2>Working in a loop</h2>
-    <p>An <strong>agentic</strong> system doesn&rsquo;t stop at one answer. It looks at a result, decides what to do next, calls another tool, and repeats until the task is done, taking several steps toward a goal on its own.</p>
+    <p><strong>Agentic</strong> systems revise each tool call from the last result. Test-time computing gives the loop more passes; OpenClaw and Hermes agents run the loop.</p>
+    <ul class="compact-bullets">
+      <li><strong>Search:</strong> skim weak hits, rewrite the query</li>
+      <li><strong>Code:</strong> read an error, patch, rerun</li>
+      <li><strong>OCR:</strong> inspect bad text, tighten instructions</li>
+    </ul>
   </div>
   <div class="stage" style="background: var(--bg-panel);">
-    <img src="images/steve-agentic-loop-handdrawn.png" alt="A hand-drawn loop: ask, look at the result, decide, call a tool, and repeat until the task is done." class="screenshot-img">
+    <img src="images/steve-agentic-loop-handdrawn-soft.png" alt="A hand-drawn loop: ask, inspect the result, choose a tool, revise the call, and repeat." class="screenshot-img soft-diagram">
   </div>
 </div>
 
@@ -205,54 +208,58 @@
 </div>
 
 <!-- 15 — THE OPEN TENSION, build 1 of 2: the diagnosis -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 13: What happens to open" data-slide="worry-open" tabindex="-1">
+<div class="slide layout-split open-flow-slide" role="group" aria-roledescription="slide" aria-label="Slide 13: What happens to open" data-slide="worry-open" tabindex="-1">
   <div class="content">
     <h2>What happens to &ldquo;open&rdquo;</h2>
-    <p style="margin-bottom: 0.6em;">When you license work openly, anyone may reuse it, so long as they credit you and give back to the commons. <strong>AI training uses the work without crediting it or giving anything back.</strong></p>
+    <p style="margin-bottom: 0.6em;">When you license work openly, anyone may reuse it, so long as they credit you and give back to the commons. <strong>Model builders train on the work without crediting it or giving anything back.</strong></p>
     <p>Openly licensed work is the easiest to ingest, because anyone may copy it.</p>
     <p class="src">On openness as its own vulnerability: <a href="https://openfuture.eu/publication/paradox-of-open-policies-for-the-digital-commons/" target="_blank" rel="noopener">Open Future, &ldquo;The Paradox of Open&rdquo;</a>; <a href="https://sverhulst.medium.com/the-weaponisation-of-openness-toward-a-new-social-contract-for-data-in-the-ai-era-fb9f49ef6109" target="_blank" rel="noopener">Verhulst, &ldquo;The Weaponisation of Openness,&rdquo; 2025</a>.</p>
   </div>
-  <div class="stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
-    <div style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:360px; margin:0 auto;">
+  <div class="stage open-flow-stage" style="flex-direction: column; justify-content: center; padding: clamp(16px, 2.5vw, 36px); background: var(--bg-light);">
+    <div class="open-flow" style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:360px; margin:0 auto;">
       <div class="flow-node flow-student"><div class="flow-node-label">The open bargain</div><div class="flow-node-desc">Reuse freely &middot; credit the source &middot; give back</div></div>
       <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-blue)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-      <div class="flow-node" style="background:var(--paper); border:2px solid rgba(59,111,181,0.3); border-radius:12px;"><div class="flow-node-label">AI training ingests it</div><div class="flow-node-desc">Takes the reuse, drops the credit, returns nothing</div></div>
+      <div class="flow-node" style="background:var(--paper); border:2px solid rgba(59,111,181,0.3); border-radius:12px;"><div class="flow-node-label">Model builders train on it</div><div class="flow-node-desc">They reuse the work, drop the credit, and return nothing</div></div>
       <div style="text-align:center;" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-red)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
       <div class="flow-node" style="background:rgba(214,69,65,0.08); border:2px solid rgba(214,69,65,0.4); border-radius:12px;"><div class="flow-node-label">A &ldquo;data winter&rdquo;</div><div class="flow-node-desc">People stop sharing; the commons shrinks</div></div>
     </div>
   </div>
 </div>
 
-<!-- WORRY — AI eats the audience -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 14: AI eats the audience" data-slide="worry-audience" tabindex="-1">
-  <h2>AI eats the audience</h2>
-  <p class="lead center-narrow" style="margin-bottom: 0.6em;">When AI answers the question, people stop clicking through to the source.</p>
+<!-- WORRY — chatbots take the audience -->
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 14: Chatbots take the audience" data-slide="worry-audience" tabindex="-1">
+  <h2>Chatbots take the audience</h2>
+  <p class="lead center-narrow" style="margin-bottom: 0.6em;">When a chatbot answers the question, people stop clicking through to the source.</p>
   <p class="center-narrow">On a volunteer-run commons, the readers are also the people who maintain it. Referral traffic to open sites has fallen hard this year, and Wikipedia&rsquo;s human visits are sliding even as the bots scraping it climb.</p>
   <p class="src">On the referral collapse: <a href="https://www.adexchanger.com/publishers/the-ai-search-reckoning-is-dismantling-open-web-traffic-and-publishers-may-never-recover/" target="_blank" rel="noopener">AdExchanger, 2025</a>; on Wikipedia&rsquo;s human traffic and crawler load, <a href="https://diff.wikimedia.org/2025/04/01/how-crawlers-impact-the-operations-of-the-wikimedia-projects/" target="_blank" rel="noopener">Wikimedia, 2025</a>.</p>
 </div>
 
 <!-- WORRY — publishers sold your scholarship -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 15: Sold over your head" data-slide="worry-publishers" tabindex="-1">
-  <h2>Sold over your head</h2>
-  <p class="lead center-narrow" style="margin-bottom: 0.6em;">Your publisher can license your work to AI companies without asking you.</p>
-  <p class="center-narrow">The publishers that hold the copyright signed the deals. Taylor &amp; Francis took $10 million from Microsoft, Wiley $44 million, and by the Authors Guild&rsquo;s account no authors were asked or paid. The work they sold was the closed, paywalled kind that authors sign over to publishers.</p>
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 15: Academic publishers are selling scholarly writing to AI companies" data-slide="worry-publishers" tabindex="-1">
+  <h2>Academic publishers are selling scholarly writing to AI companies.</h2>
+  <p class="lead center-narrow" style="margin-bottom: 0.6em;">In the reported deals, authors were not asked or paid.</p>
+  <p class="center-narrow">Taylor &amp; Francis took $10 million from Microsoft, and Wiley took $44 million. The Authors Guild says authors were not asked or paid. The writing sold was the closed, paywalled kind that authors sign over to publishers.</p>
   <p class="src">On the publisher&ndash;AI licensing deals: <a href="https://www.thebookseller.com/comment/academic-publishers-and-ai-one-year-on" target="_blank" rel="noopener">The Bookseller, 2025</a>; <a href="https://authorsguild.org/advocacy/artificial-intelligence/ai-licensing-what-authors-should-know/" target="_blank" rel="noopener">Authors Guild</a>.</p>
 </div>
 
 <!-- 16 — THE OPEN TENSION, build 2 of 2: no individual exit -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 16: You can't license your way out" data-slide="worry-no-exit" tabindex="-1">
-  <h2>You can&rsquo;t license your way out</h2>
-  <p class="lead center-narrow" style="margin-bottom: 0.6em;">Adding a no-AI or non-commercial clause won&rsquo;t stop AI training. Creative Commons, which created these licenses, says so itself.</p>
-  <p class="center-narrow">In 2025 courts ruled that training is fair use even on copyrighted work; Anthropic paid $1.5 billion only for pirating the books, not for training on them. Since training is already fair use, a restrictive license mostly gets in the way of the people who would reuse your work. The model isn&rsquo;t bound by it. The responses with any force are collective ones, like CC&rsquo;s preference signals or Wikimedia charging scrapers for access.</p>
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 16: A license alone will not stop model training" data-slide="worry-no-exit" tabindex="-1">
+  <h2>A license alone will not stop model training.</h2>
+  <p class="center-narrow">In 2025 courts ruled that training can be fair use even on copyrighted work. Anthropic paid $1.5 billion for pirating the books, not for training on them. A restrictive license mostly affects people who want to reuse your work in ordinary ways. Collective responses, like CC&rsquo;s preference signals or Wikimedia charging scrapers for access, have more force.</p>
   <p class="src">CC licenses can&rsquo;t block training: <a href="https://creativecommons.org/2025/05/15/understanding-cc-licenses-and-ai-training-a-legal-primer/" target="_blank" rel="noopener">CC legal primer, 2025</a>. The ruling: <a href="https://www.wiggin.com/publication/bartz-v-anthropic-first-court-decision-on-fair-use-defense-in-llm-training/" target="_blank" rel="noopener">Bartz v. Anthropic</a> + <a href="https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/" target="_blank" rel="noopener">$1.5B settlement</a>. Collective responses: <a href="https://creativecommons.org/2026/05/13/from-signals-to-infrastructure-strengthening-the-commons-for-the-ai-era/" target="_blank" rel="noopener">CC, &ldquo;From Signals to Infrastructure,&rdquo; 2026</a>; <a href="https://www.techtimes.com/articles/312606/20251110/wikipedia-wants-companies-stop-scraping-data-ai-training-offers-paid-api-access-instead.htm" target="_blank" rel="noopener">Wikimedia paid API, 2025</a>.</p>
 </div>
 
 <!-- WEIGHTS — open vs closed weights, for OER -->
-<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 17: Open vs closed weights" data-slide="worry-weights" tabindex="-1">
-  <h2>Open vs closed weights</h2>
-  <p class="lead center-narrow" style="margin-bottom: 0.6em;">An OER built on a closed, commercial model isn&rsquo;t really open.</p>
-  <p class="center-narrow">Even when the content is openly licensed, the model underneath stays closed. You can&rsquo;t run it or change it yourself, and using it requires a paid account. Open-weight models can be run and changed by anyone, and they&rsquo;ve nearly caught up on capability, though &ldquo;open weights&rdquo; still isn&rsquo;t &ldquo;open source&rdquo; (most withhold the data and code) and they need hardware to run.</p>
-  <p class="src">On the 5&nbsp;R&rsquo;s and what counts as open: <a href="https://opencontent.org/definition/" target="_blank" rel="noopener">Wiley, &ldquo;Defining the &lsquo;Open&rsquo;&rdquo;</a>; on proprietary AI vs. open education, <a href="https://www.unesco.org/en/articles/open-education-principles-resisting-metrics-ai-black-boxes" target="_blank" rel="noopener">UNESCO, 2024</a>; &ldquo;open weights&rdquo; &ne; &ldquo;open source,&rdquo; <a href="https://opensource.org/blog/metas-llama-license-is-still-not-open-source" target="_blank" rel="noopener">OSI, 2024</a>; the compute divide, <a href="https://societyandai.org/perspectives/beyond-the-open-weights/" target="_blank" rel="noopener">Society &amp; AI, 2025</a>.</p>
+<div class="slide layout-content" style="justify-content: center;" role="group" aria-roledescription="slide" aria-label="Slide 17: When open knowledge becomes weights" data-slide="worry-weights" tabindex="-1">
+  <h2>When open knowledge becomes weights</h2>
+  <p class="center-narrow">Wiley&rsquo;s 5Rs ask whether people can keep, revise, remix, reuse, and share a resource. When model builders turn that material into weights, the checks change.</p>
+  <ul class="compact-bullets center-narrow">
+    <li>Can people download and run the weights?</li>
+    <li>Can people inspect the training data and code, or are they kept behind closed doors?</li>
+    <li>Does the license permit reuse, or does it stay semi-permissive or restrictive?</li>
+    <li>Does the model require costly hardware by design?</li>
+  </ul>
+  <p class="src">Sources. <a href="https://opencontent.org/definition/" target="_blank" rel="noopener">Wiley</a>; <a href="https://www.unesco.org/en/articles/open-education-principles-resisting-metrics-ai-black-boxes" target="_blank" rel="noopener">UNESCO, 2024</a>; <a href="https://opensource.org/blog/metas-llama-license-is-still-not-open-source" target="_blank" rel="noopener">OSI, 2024</a>; <a href="https://societyandai.org/perspectives/beyond-the-open-weights/" target="_blank" rel="noopener">Society &amp; AI, 2025</a>.</p>
 </div>
 
 <!-- THE OPEN ANSWER — public AI -->
