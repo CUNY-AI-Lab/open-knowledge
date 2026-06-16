@@ -1020,21 +1020,21 @@ body::after {
 .logo-wall {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(12px, 1.5vw, 20px);
+  gap: clamp(14px, 1.8vw, 24px);
   width: 100%;
-  max-width: 440px;
+  max-width: 580px;
   margin: 0.6em auto 0.4em;
 }
 .logo-cell {
   background: #fff;
   border: 1px solid var(--hairline);
-  border-radius: 12px;
-  height: clamp(72px, 12vh, 108px);
+  border-radius: 14px;
+  height: clamp(116px, 19vh, 172px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(12px, 2vh, 20px) clamp(16px, 2vw, 26px);
-  box-shadow: 0 3px 14px rgba(21,35,59,0.06);
+  padding: clamp(14px, 2.2vh, 22px) clamp(20px, 2.6vw, 34px);
+  box-shadow: 0 4px 18px rgba(21,35,59,0.07);
 }
 .logo-cell img {
   max-width: 100%;
@@ -1049,6 +1049,21 @@ body::after {
   background: var(--ink);
   border-color: rgba(255, 255, 255, 0.14);
 }
+/* clickable logo tiles → respective center sites */
+a.logo-cell {
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+a.logo-cell:hover,
+a.logo-cell:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(21,35,59,0.14);
+  border-color: rgba(31,168,156,0.5);
+  outline: none;
+}
+a.logo-cell.dark:hover,
+a.logo-cell.dark:focus-visible { border-color: rgba(31,168,156,0.7); }
 
 /* --- Centered offer cards (slide 7) --- */
 .offer-grid.centered .offer { text-align: center; }
