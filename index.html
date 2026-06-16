@@ -82,15 +82,15 @@
 <div class="slide layout-split inference-slide" role="group" aria-roledescription="slide" aria-label="Slide 5: Inference generates one token at a time" data-slide="what-is-llm" tabindex="-1">
   <div class="content">
     <h2>Inference generates one token at a time</h2>
-    <p style="margin-bottom: 0.7em;">The tokenizer turns the prompt into <strong>token IDs</strong>, which fill the start of the model&rsquo;s <strong>context window</strong>.</p>
-    <p>The model runs a <strong>forward pass</strong> and returns <strong>logits</strong>, the raw scores for possible next tokens. A decoding rule chooses one token, adds it to the context, and the process runs again.</p>
+    <p style="margin-bottom: 0.7em;">The model begins by turning your prompt into <strong>token IDs</strong>. Those tokens enter the <strong>context window</strong>, along with any tokens the model has already generated.</p>
+    <p>For each step, the model runs a <strong>forward pass</strong> and produces <strong>logits</strong>, or scores for possible next tokens. A decoding rule allows it to choose one token, the model adds that token to the context, and then starts again.</p>
   </div>
   <div class="stage inference-stage" style="background: var(--bg-light);">
     <div class="inference-flow">
       <div class="flow-node flow-student"><div class="flow-node-label">1. Tokenize prompt</div><div class="flow-node-desc">Text becomes token IDs</div></div>
-      <div class="flow-node" style="background:var(--paper); border:2px solid rgba(59,111,181,0.3); border-radius:12px;"><div class="flow-node-label">2. Context window</div><div class="flow-node-desc">Prompt tokens plus generated tokens</div></div>
-      <div class="flow-node" style="background:rgba(78,205,196,0.08); border:2px solid rgba(78,205,196,0.35); border-radius:12px;"><div class="flow-node-label">3. Forward pass</div><div class="flow-node-desc">Model scores possible next tokens</div></div>
-      <div class="flow-node flow-response" style="border-radius:12px;"><div class="flow-node-label">4. Logits</div><div class="flow-node-desc">Raw scores over the vocabulary</div></div>
+      <div class="flow-node" style="background:var(--paper); border:2px solid rgba(59,111,181,0.3); border-radius:12px;"><div class="flow-node-label">2. Fill context window</div><div class="flow-node-desc">Prompt tokens plus generated tokens</div></div>
+      <div class="flow-node" style="background:rgba(78,205,196,0.08); border:2px solid rgba(78,205,196,0.35); border-radius:12px;"><div class="flow-node-label">3. Run forward pass</div><div class="flow-node-desc">The model calculates next-token scores</div></div>
+      <div class="flow-node flow-response" style="border-radius:12px;"><div class="flow-node-label">4. Produce logits</div><div class="flow-node-desc">Scores across the vocabulary</div></div>
       <div class="flow-node flow-response" style="border-radius:12px;"><div class="flow-node-label">5. Decode token</div><div class="flow-node-desc">Choose one token, add it, repeat</div></div>
     </div>
   </div>
